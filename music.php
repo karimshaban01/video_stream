@@ -1,8 +1,8 @@
 <?php
-    require_once 'video_finder.php';
+    require_once 'music_finder.php';
     
     $finder = new VideoFinder();
-    $videos = $finder->findVideos('/var/www/html/movie');
+    $videos = $finder->findVideos('/var/www/html/music');
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Stream</title>
+    <title>Music Player</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -23,12 +23,12 @@
             background-color: #1a1a1a;
             color: #fff;
         }
-        video {
+        audio {
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 20%;
+            left: 0.5%;
             width: 70%;
-            height: 100vh;
+            height: 40% /* 100vh */ ;
             background: #000;
             border-right: 2px solid #333;
             object-fit: contain; /* Make video fit properly */
@@ -121,7 +121,7 @@
     </style>
 </head>
 <body>
-    <video id="video_player" src="" controls autoplay></video>
+    <audio id="video_player" src="" controls autoplay class="video_player"></audio>
     <div class="video-list">
         <ul>
             <?php 

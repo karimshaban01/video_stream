@@ -1,6 +1,6 @@
 <?php
 class VideoFinder {
-    private $videoExtensions = ['mp4','webm']; //, 'mkv', 'avi', 'mov', 'wmv', 'flv', 
+    private $videoExtensions = ['mp3','m4a']; //, 'mkv', 'avi', 'mov', 'wmv', 'flv', 
     
     public function findVideos($directory) {
         $videos = [];
